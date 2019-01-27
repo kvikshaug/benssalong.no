@@ -46,8 +46,18 @@ header nav ul li a {
 header nav ul li.current {
   background-color: #363636;              
 }
+
 header nav ul li.current a {
   color: #ffffff;
+}
+
+section .gallery-image {
+  width: 47%;
+  margin: 1%;
+}
+
+aside h2 {
+  font-size: 22px;
 }
 
 footer {

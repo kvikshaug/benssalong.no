@@ -40,44 +40,45 @@
       </nav>
     </header>
 
-    <div id="article">
-      {% block content %}{% endblock %}
-    </div>
-    <div id="aside">
-      <h2>Åpningstider</h2>
-      <p>
-        Man-ons: 09:00-17:00<br>
-        Torsdag: 09:00-18:00<br>
-        Fredag: 09:00-17:00<br>
-        Lørdag: 09:00-14:00<br>
-        Søndag: Stengt
-      </p>
+    <article class="row">
+      <section class="col-md">
+        {% block content %}{% endblock %}
+      </section>
+      <aside class="col-md-auto">
+        <h2>Åpningstider</h2>
+        <p>
+          Man-ons: 09:00-17:00<br>
+          Torsdag: 09:00-18:00<br>
+          Fredag: 09:00-17:00<br>
+          Lørdag: 09:00-14:00<br>
+          Søndag: Stengt
+        </p>
 
-      <h2>Priser</h2>
-      <p>
-        Klipp:<br>
-        Herre: kr 340<br>
-        Dame:kr 470<br>
-        Barn: kr 280<br>
-        <br>
-        Striper:<br>
-        <br>
-        striper i hette kort hår kr 680<br>
-        Striper i hette langt hår kr 780<br>
-        Foliestriper kort hår kr 750<br>
-        Foliestriper langt hår fra kr 850<br>
-        Ettervekst farge kr 680<br>
-        Hel farge kort hår kr 850<br>
-        Hel farge langt hår fra kr 950<br>
-        Permanent: fra 1100<br>
-        Barbering: kr 80
-      </p>
-      <h2>Timebestilling</h2>
-      <p>
-        * Ring 370 43 615<br>
-        * Eller kom innom
-      </p>
-    </div>
+        <h2>Priser</h2>
+        <p>
+          Klipp:<br>
+          Herre: kr 340<br>
+          Dame:kr 470<br>
+          Barn: kr 280<br>
+          <br>
+          Striper:<br>
+          Striper i hette kort hår kr 680<br>
+          Striper i hette langt hår kr 780<br>
+          Foliestriper kort hår kr 750<br>
+          Foliestriper langt hår fra kr 850<br>
+          Ettervekst farge kr 680<br>
+          Hel farge kort hår kr 850<br>
+          Hel farge langt hår fra kr 950<br>
+          Permanent: fra 1100<br>
+          Barbering: kr 80
+        </p>
+        <h2>Timebestilling</h2>
+        <p>
+          * Ring 370 43 615<br>
+          * Eller kom innom
+        </p>
+      </aside>
+    </article>
 
     <footer class="text-center">
       Ben's Salong<br>
