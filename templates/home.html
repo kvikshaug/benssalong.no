@@ -1,11 +1,15 @@
 {% extends "layout.html" %}
 
 {% block content %}
-  <h2></h2>
   <img src="/static/lauras-hus.jpg" alt="Lauras Hus" class="embed-image">
   <p>
     Ben's salong ligger i det eldste huset i Grimstad. Huset kalles Lauras Hus og er fra 1600 tallet.<br>
     <br>
     Salongen ble åpnet i april 1996 av Ben Rafik A Lajili. I 2008 ble Tove Smestad ansatt og i dag driver de bedriften sammen.
   </p>
+
+  {% if data.nyheter %}
+    <h3>Nyheter</h3>
+    {{ data.nyheter|replace("\n", "<br>")|safe }}
+  {% endif %}
 {% endblock %}

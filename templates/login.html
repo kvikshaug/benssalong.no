@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <form action="/login" method="POST">
+    <div class="form-group">
+      <input
+        class="form-control {% if failed_login %}is-invalid{% endif %}"
+        id="password"
+        type="password"
+        name="password"
+        placeholder="Tast inn passord...">
+        {% if failed_login %}
+          <div class="invalid-feedback">
+            Feil passord, vennligst prøv igjen.
+          </div>
+        {% endif %}
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Logg inn</button>
+  </form>
+{% endblock %}
