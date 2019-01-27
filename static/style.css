@@ -1,237 +1,51 @@
-/**
- * Stylesheet for benssalong.no
- * By: Ali Kaafarani (www.kvikshaug.no)
- * For: Rafik Ben A. Lajili
- * Date: 20.02.10
- */
+@media (min-width: 680px) {
+  body {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
 
 body {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* structure */
-
-div#section {
-  display: block; /* for non-html5 browsers */
-  width: 80%;
-  margin-left: auto; 
-  margin-right: auto;
+header {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
-div#header {
-  display: block; /* for non-html5 browsers */
-}
-
-div#header h1 {
-  color: #000;
-  font-family: helvetica, sans-serif;
-  font-size: 36px;
-  font-variant: small-caps;
-  font-weight: normal;
-  margin: 0 0 0 30px;
-}
-
-/* navigation menu */
-
-div#nav {
-  display: block;
-  clear: both;
-  height: 45px;
-  margin-top: 0;
-  margin-bottom: 17px;
-  background-image: url('menubar-dark.png');
-  background-position: top left;
-  background-repeat: repeat-x;
-  border: 1px solid #000;
-}
-
-div#nav ul {
-  margin: 0 0 0 25px;
-  padding: 0;
-  height: inherit;
-}
-
-div#nav li {
-  list-style: none;
-  display: inline-block;
-  height: inherit;
-}
-
-div#nav li a, div#nav li a:visited, div#nav li a:active {
-  /* total: 45px => font: 16px, padding-top: 11px, padding-bottom: 13px, 5px goes where? */
-  display: block;
+header h1 {
   margin: 0;
-  padding: 11px 25px 13px 25px;
-  font-size: 16px;
-  color: white;
+  font-family: "Poiret One", cursive;
+  font-size: 42px;
+}
+header h1 a {
+  color: #262626;
   text-decoration: none;
 }
+  
+header nav ul {
+  margin: 0;
+  padding: 0;
+}
 
-div#nav li a:hover {
-/*  background-color: #c0cadc;*/
+header nav ul li {
+  display: inline-block;
+  padding: 0 15px;
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+header nav ul li a {
+  display: block;
+  height: 60px;
+  line-height: 60px;
   text-decoration: none;
-  background-color: #dde1e6;
-  color: #222;
+  color: #262626;
 }
 
-div#nav li a.marked {
-  font-weight: bold;
+header nav ul li.current {
+  background-color: #363636;              
 }
-
-/* main content */
-
-div#article {
-  display: block; /* for non-html5 browsers */
-  float: left;
-  color: #555555;
-  width: 65%;
-  padding: 0 0 0 2%;
-  margin: 0 0 15px 0;
-}
-
-img {
-  border: none;
-}
-
-img.image-right {
-  float: right;
-  margin-top: 16px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-}
-
-img.image-left {
-  float: left;
-  margin-top: 16px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
-div#article a, div#article a:visited div#article a:active {
-  color: #344b68;
-  text-decoration: underline;
-}
-
-div#article a:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-
-div#article h2 a, div#article h2 a:visited, div#article h2 a:active, div#article h2 a:hover {
-  text-decoration: none;
-}
-
-.quote {
-  color: #555555;
-  line-height: 130%;
-  background-color: #f8f8f8;
-  margin: 15px 30px 15px 20px;
-  padding: 5px 17px 5px 12px;
-  border-left: 1px dotted #c0cadc;
-}
-
-/* sidebar */
-
-div#aside {
-  display: block; /* for non-html5 browsers */
-  float: right;
-  clear: right;
-  border: 1px solid #74797f;
-  background: #c0cadc;
-  color: #142b48;
-  margin: 15px 1% 15px 2%;
-  width: 25%;
-  padding: 0 10px 0 10px;
-}
-
-div#aside h2 {
-  border-bottom: solid 1px black;
-  font-size: 1em;
-  color: #000;
-}
-
-div#aside p {
-  font-size: 0.8em;
-}
-
-/* footer */
-
-div#footer {
-  display: block; /* for non-html5 browsers */
-  clear: both;
-  color: #ddd;
-  font-size: 0.7em;
-  line-height: 180%;
-  padding: 4%;
-  width: 92%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #222;
-  background-image: url("footer-top-fade.png");
-  background-repeat: repeat-x;
-}
-
-#footerleft {
-  float: left;
-  width: 200px;
-  margin-left: 10%;
-}
-
-#footercenter {
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-}
-
-#footerright {
-  float: right;
-  margin-right: 10%;
-  width: 200px;
-}
-
-div#footer a, div#footer a:visited div#footer a:active {
-  color: #344b68;
-  text-decoration: underline;
-}
-
-div#footer a:hover {
-  color: #000000;
-  text-decoration: underline;
-}
-div#footer input.adminlogin {
-  border: 1px solid #fff;
-  background-color: #2a2a2a;
-  color: #fff;
-  margin-bottom: 2px;
-}
-
-div#footer input.submit {
-  font-size: 0.9em;
-}
-
-/* gallery, tables */
-
-table#gallery th, table#gallery td {
-  background-color: #fff;
-  border-bottom: 0;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-table th {
-  font-weight: normal;
-  color: #039;
-  background-color: #eaeaea;
-  border-bottom: 2px solid #6678b1;
-  padding: 10px 8px;
-}
-
-table td {
-  color: #447;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ccc;
-  padding: 6px 8px;
+header nav ul li.current a {
+  color: #ffffff;
 }
