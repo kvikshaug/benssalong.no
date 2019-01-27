@@ -49,3 +49,9 @@ header nav ul li.current {
 header nav ul li.current a {
   color: #ffffff;
 }
+
+footer {
+  font-size: 12px;
+  color: rgb(129, 129, 129);
+  margin: 80px 0 40px 0;
+}
