@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Bens Salong</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/style.css">
+  </head>
+  <body>
+    <div id="section">
+      <div id="header">
+        <h1>Bens Salong</h1>
+      </div>
+      <div id="nav">
+        <ul>
+          <li>
+            <a href="/" {% if page == "home" %}class="marked"{% endif %}>
+              Hjem
+            </a>
+          </li>
+          <li>
+            <a href="/varetilbud" {% if page == "varetilbud" %}class="marked"{% endif %}>
+              Varetilbud
+            </a>
+          </li>
+          <li>
+            <a href="/galleri" {% if page == "galleri" %}class="marked"{% endif %}>
+              Galleri
+            </a>
+          </li>
+          <li>
+            <a href="/omoss" {% if page == "omoss" %}class="marked"{% endif %}>
+              Om oss
+            </a>
+          </li>
+          <li>
+            <a href="/kontakt" {% if page == "kontakt" %}class="marked"{% endif %}>
+              Kontakt
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="article">
+        {% block content %}{% endblock %}
+      </div>
+      <div id="aside">
+        <h2>Åpningstider</h2>
+        <p>
+          Man-ons: 09:00-17:00<br>
+          Torsdag: 09:00-18:00<br>
+          Fredag: 09:00-17:00<br>
+          Lørdag: 09:00-14:00<br>
+          Søndag: Stengt
+        </p>
+
+        <h2>Priser</h2>
+        <p>
+          Klipp:<br>
+          Herre: kr 340<br>
+          Dame:kr 470<br>
+          Barn: kr 280<br>
+          <br>
+          Striper:<br>
+          <br>
+          striper i hette kort hår kr 680<br>
+          Striper i hette langt hår kr 780<br>
+          Foliestriper kort hår kr 750<br>
+          Foliestriper langt hår fra kr 850<br>
+          Ettervekst farge kr 680<br>
+          Hel farge kort hår kr 850<br>
+          Hel farge langt hår fra kr 950<br>
+          Permanent: fra 1100<br>
+          Barbering: kr 80
+        </p>
+        <h2>Timebestilling</h2>
+        <p>
+          * Ring 370 43 615<br>
+          * Eller kom innom
+        </p>
+      </div>
+      <div id="footer">
+        <div id="footerleft">
+          Bens Salong<br>
+          Org. nr: 976200853<br>
+          Smith Petersensgate 1<br>
+          4876 Grimstad<br>
+          Tlf: 370 43615
+        </div>
+        <div id="footerright">
+          <form action="?a=l" method="post">
+            Administrér:<br>
+            <input class="adminlogin" type="text" name="username" onclick=""><br>
+            <input class="adminlogin" type="password" name="password"><br>
+            <input class="adminlogin submit" type="submit" value="Logg inn">
+          </form>
+        </div>
+        <div id="footercenter">
+          Design inspirert av <a href="http://www.infscripts.com/">Inf</a>.<br>
+          Skrevet av <a href="http://www.kvikshaug.no/">Ali Kaafarani</a>.<br>
+          Validér <a href="http://validator.w3.org/check?uri=referer">HTML5</a>
+          eller <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>.
+        </div>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+  </body>
+</html>
