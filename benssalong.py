@@ -8,7 +8,7 @@ import db
 app = Flask(__name__)
 app.debug = True
 app.secret_key = os.urandom(32)
-app.config['PASSWORD'] = os.environ['PASSWORD']
+app.config["PASSWORD"] = os.environ["PASSWORD"]
 
 
 @app.route("/")
@@ -38,37 +38,41 @@ def kontakt():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    if 'authenticated' in session:
-        return redirect(url_for('admin'))
+    if "authenticated" in session:
+        return redirect(url_for("admin"))
     failed_login = False
-    if request.method == 'POST':
-        if request.form.get('password', '') == app.config['PASSWORD']:
-            session['authenticated'] = True
-            return redirect(url_for('admin'))
+    if request.method == "POST":
+        if request.form.get("password", "") == app.config["PASSWORD"]:
+            session["authenticated"] = True
+            return redirect(url_for("admin"))
         else:
             failed_login = True
-    return render_template("login.html", page="login", data=db.data, failed_login=failed_login)
+    return render_template(
+        "login.html", page="login", data=db.data, failed_login=failed_login
+    )
 
 
 @app.route("/admin", methods=["GET", "POST"])
 def admin():
-    if 'authenticated' not in session:
-        return redirect(url_for('login'))
-    
+    if "authenticated" not in session:
+        return redirect(url_for("login"))
+
     if request.method == "GET":
         return render_template("admin.html", page="admin", data=db.data_unescaped())
     else:
         db.save(
-            åpningstider=request.form['åpningstider'],
-            priser=request.form['priser'],
-            timebestilling=request.form['timebestilling'],
-            nyheter=request.form['nyheter'],
-            varetilbud=request.form['varetilbud'],
+            åpningstider=request.form["åpningstider"],
+            priser=request.form["priser"],
+            timebestilling=request.form["timebestilling"],
+            nyheter=request.form["nyheter"],
+            varetilbud=request.form["varetilbud"],
         )
-        return render_template("admin.html", page="admin", data=db.data_unescaped(), saved=True)
+        return render_template(
+            "admin.html", page="admin", data=db.data_unescaped(), saved=True
+        )
 
 
 @app.route("/loggut")
 def logout():
-    session.pop('authenticated', None)
-    return redirect(url_for('home'))
+    session.pop("authenticated", None)
+    return redirect(url_for("home"))
