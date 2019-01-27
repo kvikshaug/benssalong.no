@@ -56,6 +56,12 @@ section .gallery-image {
   margin: 1%;
 }
 
+section .embed-image {
+  float: right;
+  margin: 0 0 10px 10px;
+  width: 60%;
+}
+
 aside h2 {
   font-size: 22px;
 }
