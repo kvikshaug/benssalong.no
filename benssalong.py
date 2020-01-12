@@ -6,7 +6,6 @@ import db
 
 
 app = Flask(__name__)
-app.debug = True
 app.secret_key = os.urandom(32)
 app.config["PASSWORD"] = os.environ["PASSWORD"]
 
